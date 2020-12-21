@@ -2,23 +2,23 @@ const USER = {
     data: []
 };
 
-// (function user() {
-//     let xhttp = new XMLHttpRequest();
-//     const URL = "http://localhost:8080";
-//
-//     xhttp.open("GET", URL + `/user`, false);
-//
-//     xhttp.onreadystatechange = () => {
-//         if (xhttp.status !== 200) {
-//             console.log("HTTP ERROR", xhttp.status, xhttp.statusText);
-//         } else {
-//             USER.data = JSON.parse(xhttp.responseText);
-//             console.log(USER.data);
-//         }
-//     };
-//     xhttp.setRequestHeader("Content-Type", "application/json");
-//     xhttp.send();
-// })();
+(function user() {
+    let xhttp = new XMLHttpRequest();
+    const URL = "http://localhost:8080";
+
+    xhttp.open("GET", URL + `/user`, false);
+
+    xhttp.onreadystatechange = () => {
+        if (xhttp.status !== 200) {
+            console.log("HTTP ERROR", xhttp.status, xhttp.statusText);
+        } else {
+            USER.data = JSON.parse(xhttp.responseText);
+            console.log(USER.data);
+        }
+    };
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send();
+})();
 
 let signupPaint =
     `<header class="header_wrapper">
